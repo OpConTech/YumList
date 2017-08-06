@@ -10,13 +10,13 @@
 		218960FC1F37711300ABDD06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 218960FB1F37711300ABDD06 /* main.m */; };
 		218960FF1F37711300ABDD06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 218960FE1F37711300ABDD06 /* AppDelegate.m */; };
 		218961021F37711300ABDD06 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 218961011F37711300ABDD06 /* FirstViewController.m */; };
-		218961051F37711300ABDD06 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 218961041F37711300ABDD06 /* SecondViewController.m */; };
 		218961081F37711300ABDD06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218961061F37711300ABDD06 /* Main.storyboard */; };
 		2189610A1F37711300ABDD06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218961091F37711300ABDD06 /* Assets.xcassets */; };
 		2189610D1F37711300ABDD06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2189610B1F37711300ABDD06 /* LaunchScreen.storyboard */; };
 		218961181F37711300ABDD06 /* YumListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 218961171F37711300ABDD06 /* YumListTests.m */; };
 		218961231F37711300ABDD06 /* YumListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 218961221F37711300ABDD06 /* YumListUITests.m */; };
 		218961311F37732C00ABDD06 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 218961301F37732C00ABDD06 /* README.md */; };
+		218961341F37778E00ABDD06 /* YumListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 218961331F37778E00ABDD06 /* YumListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +43,6 @@
 		218960FE1F37711300ABDD06 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		218961001F37711300ABDD06 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		218961011F37711300ABDD06 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		218961031F37711300ABDD06 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		218961041F37711300ABDD06 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		218961071F37711300ABDD06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		218961091F37711300ABDD06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2189610C1F37711300ABDD06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +54,8 @@
 		218961221F37711300ABDD06 /* YumListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YumListUITests.m; sourceTree = "<group>"; };
 		218961241F37711300ABDD06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		218961301F37732C00ABDD06 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		218961321F37778E00ABDD06 /* YumListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumListTableViewController.h; sourceTree = "<group>"; };
+		218961331F37778E00ABDD06 /* YumListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumListTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +108,10 @@
 			children = (
 				218960FD1F37711300ABDD06 /* AppDelegate.h */,
 				218960FE1F37711300ABDD06 /* AppDelegate.m */,
+				218961321F37778E00ABDD06 /* YumListTableViewController.h */,
+				218961331F37778E00ABDD06 /* YumListTableViewController.m */,
 				218961001F37711300ABDD06 /* FirstViewController.h */,
 				218961011F37711300ABDD06 /* FirstViewController.m */,
-				218961031F37711300ABDD06 /* SecondViewController.h */,
-				218961041F37711300ABDD06 /* SecondViewController.m */,
 				218961061F37711300ABDD06 /* Main.storyboard */,
 				218961091F37711300ABDD06 /* Assets.xcassets */,
 				2189610B1F37711300ABDD06 /* LaunchScreen.storyboard */,
@@ -284,11 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				218961051F37711300ABDD06 /* SecondViewController.m in Sources */,
 				218960FF1F37711300ABDD06 /* AppDelegate.m in Sources */,
 				218961311F37732C00ABDD06 /* README.md in Sources */,
 				218961021F37711300ABDD06 /* FirstViewController.m in Sources */,
 				218960FC1F37711300ABDD06 /* main.m in Sources */,
+				218961341F37778E00ABDD06 /* YumListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

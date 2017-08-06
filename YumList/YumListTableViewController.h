@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  YumListTableViewController.h
 //  YumList
 //
 //  Created by Thomas Neary on 8/6/17.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface YumListTableViewController : UITableViewController
 
+@property (nonatomic) NSMutableArray *yumListArray;
 
 @end
-
