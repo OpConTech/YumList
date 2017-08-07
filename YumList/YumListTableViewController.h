@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DetailsTableViewController.h"
 
 @interface YumListTableViewController : UITableViewController
 

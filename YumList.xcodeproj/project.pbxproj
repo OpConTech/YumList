@@ -18,6 +18,7 @@
 		218961311F37732C00ABDD06 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 218961301F37732C00ABDD06 /* README.md */; };
 		218961341F37778E00ABDD06 /* YumListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 218961331F37778E00ABDD06 /* YumListTableViewController.m */; };
 		21BA0FB91F39030200B7C7E0 /* worklog in Resources */ = {isa = PBXBuildFile; fileRef = 21BA0FB81F39030200B7C7E0 /* worklog */; };
+		21BA0FBC1F3905E100B7C7E0 /* DetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BA0FBB1F3905E100B7C7E0 /* DetailsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		218961321F37778E00ABDD06 /* YumListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumListTableViewController.h; sourceTree = "<group>"; };
 		218961331F37778E00ABDD06 /* YumListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumListTableViewController.m; sourceTree = "<group>"; };
 		21BA0FB81F39030200B7C7E0 /* worklog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = worklog; sourceTree = "<group>"; };
+		21BA0FBA1F3905E100B7C7E0 /* DetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsTableViewController.h; sourceTree = "<group>"; };
+		21BA0FBB1F3905E100B7C7E0 /* DetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				218961011F37711300ABDD06 /* FirstViewController.m */,
 				218961321F37778E00ABDD06 /* YumListTableViewController.h */,
 				218961331F37778E00ABDD06 /* YumListTableViewController.m */,
+				21BA0FBA1F3905E100B7C7E0 /* DetailsTableViewController.h */,
+				21BA0FBB1F3905E100B7C7E0 /* DetailsTableViewController.m */,
 				218961061F37711300ABDD06 /* Main.storyboard */,
 				218961091F37711300ABDD06 /* Assets.xcassets */,
 				2189610B1F37711300ABDD06 /* LaunchScreen.storyboard */,
@@ -292,6 +297,7 @@
 				218961311F37732C00ABDD06 /* README.md in Sources */,
 				218961021F37711300ABDD06 /* FirstViewController.m in Sources */,
 				218960FC1F37711300ABDD06 /* main.m in Sources */,
+				21BA0FBC1F3905E100B7C7E0 /* DetailsTableViewController.m in Sources */,
 				218961341F37778E00ABDD06 /* YumListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

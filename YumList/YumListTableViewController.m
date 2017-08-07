@@ -48,7 +48,7 @@
     yumListDescriptionsArray = [NSMutableArray arrayWithObjects: @"Got Milk?",@"Mmmm Donuts", @"Coffeeeeeee", @"Dominos Sugar Cubes", @"Half and Half", @"Chocolate Chip..Mmmmm",nil];
     
     //Items in Grocery Basket
-    yumListInTheBasketArray = [NSMutableArray arrayWithObjects: @"0",@"1", @"0", @"0", @"0", @"1",nil];
+    yumListInTheBasketArray = [NSMutableArray arrayWithObjects: @"No",@"Yes", @"No", @"No", @"0No", @"Yes",nil];
 }
 
 
@@ -87,7 +87,7 @@
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [self.yumListQuantitiesArray objectAtIndex:indexPath.row]];
     
     
-    if ([[self.yumListInTheBasketArray objectAtIndex:indexPath.row] isEqualToString: @"1"])
+    if ([[self.yumListInTheBasketArray objectAtIndex:indexPath.row] isEqualToString: @"Yes"])
     {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
@@ -138,45 +138,28 @@
     return YES;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         [yumListArray removeObjectAtIndex:indexPath.row];
+        [yumListQuantitiesArray removeObjectAtIndex:indexPath.row];
+        [yumListDescriptionsArray removeObjectAtIndex:indexPath.row];
         [yumListInTheBasketArray removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableView reloadData];
+        
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }
+    
 }
 
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 1; //Delete
-}
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"person has selected %@",[yumListArray objectAtIndex:indexPath.row]);
-    //  [self.tableView setEditing:YES animated:YES];
-    
-    
-    if ([[yumListInTheBasketArray objectAtIndex:indexPath.row] isEqualToString: @"0"])
-    {
-        [yumListInTheBasketArray replaceObjectAtIndex:indexPath.row withObject:@"1"];
-        [self.tableView reloadData];
-    } else {
-        [yumListInTheBasketArray replaceObjectAtIndex:indexPath.row withObject:@"0"];
-        [self.tableView reloadData];
-    }
-    
-}
-
-
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"person has de-selected %@",[yumListArray objectAtIndex:indexPath.row]);
 }
 
 
@@ -329,6 +312,66 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"Details"])
+    {
+        NSIndexPath *selectedRow = [[self tableView] indexPathForSelectedRow];
+        NSString *name = [[NSString alloc] init];
+        NSString *quantity = [[NSString alloc] init];
+        NSString *description = [[NSString alloc] init];
+        NSString *inbasket = [[NSString alloc] init];
+        name = [yumListArray objectAtIndex:[selectedRow row]];
+        quantity = [yumListQuantitiesArray objectAtIndex:[selectedRow row]];
+        description = [yumListDescriptionsArray objectAtIndex:[selectedRow row]];
+        inbasket = [yumListInTheBasketArray objectAtIndex:[selectedRow row]];
+        
+        NSLog(@"\nPassing Description to Detail View...Descripiton is: %@\n", description);
+        
+        
+        DetailsTableViewController *vc = [segue destinationViewController];
+        vc.title = @"Yummy Details";
+        vc.yumListName = name;
+        vc.yumListQuantity = quantity;
+        vc.yumListDescription = description;
+        vc.yumListInBasket = inbasket;
+    }
+    
 }
+
+
+- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
+    
+    
+    NSLog(@"reaching accessoryButtonTappedForRowWithIndexPath:");
+    
+    [self performSegueWithIdentifier:@"Details" sender:[self.tableView cellForRowAtIndexPath:indexPath]];
+    
+    if ([[yumListInTheBasketArray objectAtIndex:indexPath.row] isEqualToString: @"No"])
+    {
+        [yumListInTheBasketArray replaceObjectAtIndex:indexPath.row withObject:@"Yes"];
+        [self.tableView reloadData];
+    } else {
+        [yumListInTheBasketArray replaceObjectAtIndex:indexPath.row withObject:@"No"];
+        [self.tableView reloadData];
+    }
+}
+
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"person has selected %@",[yumListArray objectAtIndex:indexPath.row]);
+    
+    if ([[yumListInTheBasketArray objectAtIndex:indexPath.row] isEqualToString: @"0"])
+    {
+        [yumListInTheBasketArray replaceObjectAtIndex:indexPath.row withObject:@"1"];
+        [self.tableView reloadData];
+    } else {
+        [yumListInTheBasketArray replaceObjectAtIndex:indexPath.row withObject:@"0"];
+        [self.tableView reloadData];
+    }
+    
+}
+
 
 @end
