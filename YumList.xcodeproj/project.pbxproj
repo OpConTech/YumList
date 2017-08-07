@@ -17,6 +17,7 @@
 		218961231F37711300ABDD06 /* YumListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 218961221F37711300ABDD06 /* YumListUITests.m */; };
 		218961311F37732C00ABDD06 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 218961301F37732C00ABDD06 /* README.md */; };
 		218961341F37778E00ABDD06 /* YumListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 218961331F37778E00ABDD06 /* YumListTableViewController.m */; };
+		21BA0FB91F39030200B7C7E0 /* worklog in Resources */ = {isa = PBXBuildFile; fileRef = 21BA0FB81F39030200B7C7E0 /* worklog */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		218961301F37732C00ABDD06 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		218961321F37778E00ABDD06 /* YumListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumListTableViewController.h; sourceTree = "<group>"; };
 		218961331F37778E00ABDD06 /* YumListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumListTableViewController.m; sourceTree = "<group>"; };
+		21BA0FB81F39030200B7C7E0 /* worklog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = worklog; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +110,10 @@
 			children = (
 				218960FD1F37711300ABDD06 /* AppDelegate.h */,
 				218960FE1F37711300ABDD06 /* AppDelegate.m */,
-				218961321F37778E00ABDD06 /* YumListTableViewController.h */,
-				218961331F37778E00ABDD06 /* YumListTableViewController.m */,
 				218961001F37711300ABDD06 /* FirstViewController.h */,
 				218961011F37711300ABDD06 /* FirstViewController.m */,
+				218961321F37778E00ABDD06 /* YumListTableViewController.h */,
+				218961331F37778E00ABDD06 /* YumListTableViewController.m */,
 				218961061F37711300ABDD06 /* Main.storyboard */,
 				218961091F37711300ABDD06 /* Assets.xcassets */,
 				2189610B1F37711300ABDD06 /* LaunchScreen.storyboard */,
@@ -126,6 +128,7 @@
 			children = (
 				218961301F37732C00ABDD06 /* README.md */,
 				218960FB1F37711300ABDD06 /* main.m */,
+				21BA0FB81F39030200B7C7E0 /* worklog */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21BA0FB91F39030200B7C7E0 /* worklog in Resources */,
 				2189610D1F37711300ABDD06 /* LaunchScreen.storyboard in Resources */,
 				2189610A1F37711300ABDD06 /* Assets.xcassets in Resources */,
 				218961081F37711300ABDD06 /* Main.storyboard in Resources */,

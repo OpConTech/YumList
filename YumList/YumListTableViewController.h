@@ -11,5 +11,8 @@
 @interface YumListTableViewController : UITableViewController
 
 @property (nonatomic) NSMutableArray *yumListArray;
+@property (nonatomic) NSMutableArray *yumListDescriptionsArray;
+@property (nonatomic) NSMutableArray *yumListQuantitiesArray;
+@property (nonatomic) NSMutableArray *yumListInTheBasketArray;
 
 @end
